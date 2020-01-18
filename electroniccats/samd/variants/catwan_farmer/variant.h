@@ -53,9 +53,9 @@ extern "C"
  *----------------------------------------------------------------------------*/
 
 // Number of pins defined in PinDescription array
-#define PINS_COUNT           (22u)
-#define NUM_DIGITAL_PINS     (8u)
-#define NUM_ANALOG_INPUTS    (4u)
+#define PINS_COUNT           (28u)
+#define NUM_DIGITAL_PINS     (23u)
+#define NUM_ANALOG_INPUTS    (5u)
 #define NUM_ANALOG_OUTPUTS   (0u)
 
 #define digitalPinToPort(P)        ( &(PORT->Group[g_APinDescription[P].ulPort]) )
@@ -76,26 +76,28 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 // LEDs
-#define PIN_LED_14           (14u)
-#define PIN_LED              PIN_LED_14
-#define LED_BUILTIN          PIN_LED_14
-#define RFM_RST              (12u)
-#define RFM_DIO0             (0u)
-#define RFM_DIO1             (23u)
-#define RFM_DIO2             (13u)
-#define RFM_DIO5             (11u)
+#define PIN_LED_13           (8u)
+#define PIN_LED              PIN_LED_13
+#define LED_BUILTIN          PIN_LED_13
+#define RFM_RST              (16u)
+#define RFM_DIO0             (14u)
+#define RFM_DIO1             (9u)
+#define RFM_DIO2             (10u)
+#define RFM_DIO5             (15u)
 
 /* Analog pins*/
  
-#define PIN_A0               (3ul)
-#define PIN_A1               (4ul)
-#define PIN_A2               (5ul)
-#define PIN_A3               (6ul)
+#define PIN_A0               (2ul)
+#define PIN_A1               (3ul)
+#define PIN_A2               (4ul)
+#define PIN_A3               (5ul)
+#define PIN_A4               (6ul)
 
 static const uint8_t A0  = PIN_A0;
 static const uint8_t A1  = PIN_A1;
 static const uint8_t A2  = PIN_A2;
 static const uint8_t A3  = PIN_A3;
+static const uint8_t A4  = PIN_A4;
 
 #define ADC_RESOLUTION		12
 
@@ -108,10 +110,10 @@ static const uint8_t A3  = PIN_A3;
  */
 #define SPI_INTERFACES_COUNT 1 //SPI on pins 10,11,12,13 
 
-#define PIN_SPI_MISO         (15u)  // PA22 SERCOM3 PAD[3]
-#define PIN_SPI_MOSI         (16u)  // PA18 SERCOM3 PAD[2]
-#define PIN_SPI_SCK          (17u)  // PA19 SERCOM3 PAD[1]
-#define PIN_SPI_SS           (18u)  // PA17 SERCOM3 PAD[0]
+#define PIN_SPI_MISO         (22u)  // PA22 SERCOM3 PAD[3]
+#define PIN_SPI_MOSI         (18u)  // PA18 SERCOM3 PAD[2]
+#define PIN_SPI_SCK          (19u)  // PA19 SERCOM3 PAD[1]
+#define PIN_SPI_SS           (17u)  // PA17 SERCOM3 PAD[0]
 #define PERIPH_SPI           sercom3
 #define PAD_SPI_TX           SPI_PAD_2_SCK_3
 #define PAD_SPI_RX           SERCOM_RX_PAD_0
@@ -125,22 +127,15 @@ static const uint8_t SCK  = PIN_SPI_SCK ;
 /*
  * Wire Interfaces
  */
-#define WIRE_INTERFACES_COUNT 1
+#define WIRE_INTERFACES_COUNT 0
 
-#define PIN_WIRE_SDA         (1u) //PA00
-#define PIN_WIRE_SCL         (2u) //PA01
-#define PERIPH_WIRE          sercom1
-//#define WIRE_IT_HANDLER    // hack! we call the i2c handler from within the serial handler!
-
-static const uint8_t SDA = PIN_WIRE_SDA;
-static const uint8_t SCL = PIN_WIRE_SCL;
 
 /*
  * USB
  */
-#define PIN_USB_HOST_ENABLE (19ul)
-#define PIN_USB_DM          (20ul)
-#define PIN_USB_DP          (21ul)
+#define PIN_USB_HOST_ENABLE (7ul)
+#define PIN_USB_DM          (24ul)
+#define PIN_USB_DP          (25ul)
 
 #ifdef __cplusplus
 }
