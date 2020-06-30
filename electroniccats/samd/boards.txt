@@ -187,9 +187,9 @@ electroniccats_makech.bootloader.file=makech/bootloader-escornabot_makech-v3.3.0
 
 electroniccats_farmer_board.name=Electronic Cats CatWAN Farmer
 electroniccats_farmer_board.vid.0=0x1209
-electroniccats_farmer_board.pid.0=0xBAB4
+electroniccats_farmer_board.pid.0=0xBAB9
 electroniccats_farmer_board.vid.1=0x1209
-electroniccats_farmer_board.pid.1=0xBAB4
+electroniccats_farmer_board.pid.1=0xBAB9
 electroniccats_farmer_board.upload.tool=bossac
 electroniccats_farmer_board.upload.protocol=sam-ba
 electroniccats_farmer_board.upload.maximum_size=262144
@@ -211,4 +211,4 @@ electroniccats_farmer_board.build.variant_system_lib=
 electroniccats_farmer_board.build.vid=0x1209
 electroniccats_farmer_board.build.pid=0xBAB4
 electroniccats_farmer_board.bootloader.tool=openocd
-electroniccats_farmer_board.bootloader.file=catwan_citizen/bootloader-catwan-citizen-v3.2.3.bin
+electroniccats_farmer_board.bootloader.file=catwan_farmer-v3.5.0-17-g05a9c6f-dirty.bin
